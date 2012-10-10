@@ -1,0 +1,4 @@
+self: play -> play-airbrake 0.1
+
+require:
+    - play
