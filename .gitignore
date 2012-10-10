@@ -3,11 +3,17 @@
 .*
 # except for .gitignore
 !.gitignore
+*.pyc
+
+# Ignore intellij module files
+*.ipr
+*.iml
 
 # Ignore Play! working directory #
 db
 dist
 eclipse
+lib
 log
 logs
 precompiled

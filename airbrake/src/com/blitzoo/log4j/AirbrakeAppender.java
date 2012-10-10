@@ -24,9 +24,6 @@ import java.util.List;
 /**
  * Packages errors in XML format and publishes them to the
  * Airbrake.io API
- * User: mwilson
- * Date: 12-06-04
- * Time: 11:04 AM
  */
 public class AirbrakeAppender extends AppenderSkeleton {
     private final String apiVersion = "2.2";
@@ -87,7 +84,7 @@ public class AirbrakeAppender extends AppenderSkeleton {
             // Information about notifier
             Element notifier = addChild(doc, notice, "notifier");
             addChild(doc, notifier, "name", "log4j-AirbrakeAppender");
-            addChild(doc, notifier, "version", "0.0.1");
+            addChild(doc, notifier, "version", "0.0.2");
             addChild(doc, notifier, "url", "http://www.blitzoo.com");
 
             // Information about the error encountered
@@ -181,6 +178,7 @@ public class AirbrakeAppender extends AppenderSkeleton {
             DOMSource source = new DOMSource(doc);
             trans.transform(source, result);
             String xmlString = sw.toString();
+            System.err.println(xmlString);
 
             //print xml
             //System.out.println("Here's the xml:\n\n" + xmlString);

@@ -2,3 +2,11 @@
 
 require:
     - play
+    - airbrake 0.1
+
+repositories:
+    - My modules:
+       type:        local
+       artifact:    ${application.path}/../[module]
+       contains:
+           - airbrake

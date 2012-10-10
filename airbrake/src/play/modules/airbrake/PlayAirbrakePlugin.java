@@ -1,9 +1,9 @@
-package play.modules.play-airbrake;
+package play.modules.airbrake;
 
 import play.Logger;
 import play.PlayPlugin;
 
-import com.blitzoo.log4j.AirbrakeAppender;
+import com.blitzoo.log4j.*;
 
 public class PlayAirbrakePlugin extends PlayPlugin {
 	@Override
